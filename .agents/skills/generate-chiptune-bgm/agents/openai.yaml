@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Chiptune BGM"
+  short_description: "Generate original loopable JRPG chiptune BGM assets"
+  default_prompt: "Generate or refresh the original chiptune BGM assets for this JRPG website, verify the output, and preserve legal replacement slots."

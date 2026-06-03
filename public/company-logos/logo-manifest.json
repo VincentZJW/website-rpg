@@ -1,0 +1,192 @@
+{
+  "generatedAt": "2026-06-02T04:21:34.733Z",
+  "sourcePolicy": "Official website icon links, linked web manifests, official-page brand images, official-site favicon fallback, and configured special-case favicon paths. Explicitly licensed third-party candidates are supported only when configured.",
+  "downloaded": 15,
+  "fallback": 0,
+  "companies": [
+    {
+      "slug": "unitree",
+      "name": "Unitree Robotics",
+      "websiteUrl": "https://www.unitree.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/unitree.svg",
+      "sourceUrl": "https://www.unitree.com/unitree-favicon.svg",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.unitree.com/",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "slug": "agibot",
+      "name": "AgiBot",
+      "websiteUrl": "https://www.agibot.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/agibot.ico",
+      "sourceUrl": "https://www.agibot.com/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.agibot.com/",
+      "contentType": "image/x-icon",
+      "notes": [
+        "https://www.agibot.com/ returned 500"
+      ]
+    },
+    {
+      "slug": "ubtech",
+      "name": "UBTECH",
+      "websiteUrl": "https://www.ubtrobot.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/ubtech.png",
+      "sourceUrl": "https://dwebsite.ubtrobot.com/zhandian.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.ubtrobot.com/cn/",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "fourier",
+      "name": "Fourier Intelligence",
+      "websiteUrl": "https://www.fftai.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/fourier.ico",
+      "sourceUrl": "https://www.fftai.com/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.fftai.com/",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "galbot",
+      "name": "Galbot",
+      "websiteUrl": "https://www.galbot.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/galbot.gif",
+      "sourceUrl": "https://www.galbot.com/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.galbot.com/",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "engineai",
+      "name": "EngineAI",
+      "websiteUrl": "https://www.engineai.com.cn/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/engineai.ico",
+      "sourceUrl": "https://www.engineai.com.cn/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.engineai.com.cn/",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "limx",
+      "name": "LimX Dynamics",
+      "websiteUrl": "https://www.limxdynamics.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/limx.ico",
+      "sourceUrl": "https://www.limxdynamics.com/favicon.ico?favicon.41f4bc48.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.limxdynamics.com/zh",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "leju",
+      "name": "Leju Robotics",
+      "websiteUrl": "https://www.lejurobot.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/leju.png",
+      "sourceUrl": "https://www.lejurobot.com/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.lejurobot.com/en",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "robot-era",
+      "name": "Robot Era",
+      "websiteUrl": "https://www.robotera.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/robot-era.png",
+      "sourceUrl": "https://www.robotera.com/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.robotera.com/",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "deeprobotics",
+      "name": "Deep Robotics",
+      "websiteUrl": "https://www.deeprobotics.cn/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/deeprobotics.ico",
+      "sourceUrl": "https://www.deeprobotics.cn/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.deeprobotics.cn/",
+      "contentType": "image/x-icon"
+    },
+    {
+      "slug": "tesla",
+      "name": "Tesla Optimus",
+      "websiteUrl": "https://www.tesla.com/AI",
+      "status": "downloaded",
+      "logoPath": "/company-logos/tesla.ico",
+      "sourceUrl": "https://digitalassets.tesla.com/favicon.ico",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.tesla.com/AI",
+      "contentType": "image/x-icon",
+      "notes": [
+        "https://www.tesla.com/AI returned 403",
+        "https://www.tesla.com/favicon.ico returned 403",
+        "https://www.tesla.com/AI returned 403",
+        "https://www.tesla.com/ returned 403",
+        "https://www.tesla.com/favicon.ico returned 403",
+        "https://www.tesla.com/apple-touch-icon.png returned 403",
+        "https://www.tesla.com/themes/custom/tesla_frontend/assets/favicons/apple-touch-icon.png returned 403",
+        "https://www.tesla.com/favicon.png returned 403",
+        "https://www.tesla.com/favicon-32x32.png returned 403",
+        "https://www.tesla.com/favicon-16x16.png returned 403",
+        "https://www.tesla.com/themes/custom/tesla_frontend/assets/favicons/favicon-32x32.png returned 403",
+        "https://www.tesla.com/themes/custom/tesla_frontend/assets/favicons/favicon-16x16.png returned 403",
+        "https://www.tesla.com/favicon.ico returned 403",
+        "https://www.tesla.com/themes/custom/tesla_frontend/assets/favicons/favicon.ico returned 403"
+      ]
+    },
+    {
+      "slug": "figure",
+      "name": "Figure AI",
+      "websiteUrl": "https://www.figure.ai/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/figure.png",
+      "sourceUrl": "https://www.figure.ai/favicon.png",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.figure.ai/",
+      "contentType": "image/png"
+    },
+    {
+      "slug": "agility",
+      "name": "Agility Robotics",
+      "websiteUrl": "https://agilityrobotics.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/agility.png",
+      "sourceUrl": "https://cdn.prod.website-files.com/68d6ca150ffa11fdc25d7575/699377afd9048d7c92197d1b_Favicon-1.png",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.agilityrobotics.com/",
+      "contentType": "image/png"
+    },
+    {
+      "slug": "boston-dynamics",
+      "name": "Boston Dynamics",
+      "websiteUrl": "https://bostondynamics.com/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/boston-dynamics.jpg",
+      "sourceUrl": "https://bostondynamics.com/wp-content/uploads/2023/06/cropped-Boston-Dynamic_favicon-192x192.jpg",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://bostondynamics.com/",
+      "contentType": "image/jpeg"
+    },
+    {
+      "slug": "1x",
+      "name": "1X Technologies",
+      "websiteUrl": "https://www.1x.tech/",
+      "status": "downloaded",
+      "logoPath": "/company-logos/1x.png",
+      "sourceUrl": "https://www.1x.tech/favicon/android-chrome-512x512.png",
+      "sourceType": "official website",
+      "sourcePageUrl": "https://www.1x.tech/",
+      "contentType": "image/png"
+    }
+  ]
+}
