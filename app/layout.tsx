@@ -1,7 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { withBasePath } from "@/lib/asset-path";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.GITHUB_PAGES === "true" ? `https://vincentzjw.github.io${basePath}` : "http://localhost:3000");
+const normalizedSiteUrl = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
+const ogImageUrl = new URL("og-image.png", normalizedSiteUrl).toString();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -20,10 +26,10 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: withBasePath("/favicon.ico"), sizes: "any" },
+      { url: withBasePath("/icon.png"), sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: withBasePath("/apple-icon.png"), sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     title: "Vincent’s AI Frontier",
@@ -31,7 +37,7 @@ export const metadata: Metadata = {
       "Explore Vincent Zhou’s background, projects, robotics focus, and talent consulting journey through an interactive RPG-style world.",
     images: [
       {
-        url: "/og-image.png",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "Vincent’s AI Frontier - Interactive RPG-style Personal Website",
@@ -45,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vincent’s AI Frontier",
     description: "Interactive RPG-style personal website for Embodied AI, Robotics, and Talent Consulting.",
-    images: ["/og-image.png"],
+    images: [ogImageUrl],
   },
 };
 

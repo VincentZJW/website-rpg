@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { gameObjects } from "@/lib/game-data";
+import { withBasePath } from "@/lib/asset-path";
 import { modelPreloadPolicy } from "@/lib/model-config";
 import { canLoadModel, getModelAsset } from "@/lib/model-registry";
 import { useGameStore } from "@/hooks/useGameStore";
@@ -13,9 +14,10 @@ const preloadedPaths = new Set<string>();
 function preloadModel(modelId: ModelId) {
   if (!canLoadModel(modelId)) return;
   const asset = getModelAsset(modelId);
-  if (preloadedPaths.has(asset.path)) return;
-  preloadedPaths.add(asset.path);
-  useGLTF.preload(asset.path, asset.compression === "draco", asset.compression === "meshopt");
+  const modelPath = withBasePath(asset.path);
+  if (preloadedPaths.has(modelPath)) return;
+  preloadedPaths.add(modelPath);
+  useGLTF.preload(modelPath, asset.compression === "draco", asset.compression === "meshopt");
 }
 
 export function useModelPreload() {

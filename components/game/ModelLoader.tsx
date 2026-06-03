@@ -6,6 +6,7 @@ import * as THREE from "three";
 import { SkeletonUtils } from "three-stdlib";
 import { CharacterFallback } from "@/components/game/CharacterFallback";
 import { ModelErrorBoundary } from "@/components/game/ModelErrorBoundary";
+import { withBasePath } from "@/lib/asset-path";
 import { canLoadModel, getModelAsset } from "@/lib/model-registry";
 import type { CharacterAnimationState, CharacterExpression, FallbackType, ModelId } from "@/types/models";
 
@@ -46,7 +47,8 @@ function LoadedModel({
   modelRef,
 }: LoadedModelProps) {
   const asset = getModelAsset(modelId);
-  const { scene, animations } = useGLTF(asset.path, asset.compression === "draco", asset.compression === "meshopt");
+  const modelPath = withBasePath(asset.path);
+  const { scene, animations } = useGLTF(modelPath, asset.compression === "draco", asset.compression === "meshopt");
   const sceneClone = useMemo(() => {
     const clone = SkeletonUtils.clone(scene);
     clone.traverse((node) => {

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, type ReactNode } from "react";
 import { bgmConfig, getBgmTrack, getSceneBgmTrack, type BgmTrack, type BgmTrackId, type WebAudioFallback } from "@/lib/bgm-config";
+import { withBasePath } from "@/lib/asset-path";
 import { useBgm, type BgmRuntime } from "@/hooks/useBgm";
 import { useGameStore } from "@/hooks/useGameStore";
 import { useTimeTheme } from "@/hooks/useTimeTheme";
@@ -214,7 +215,7 @@ class BgmEngine implements BgmRuntime {
   private async startTrack(trackId: BgmTrackId, generation: number) {
     const track = getBgmTrack(trackId);
     try {
-      const audio = new Audio(track.src);
+      const audio = new Audio(withBasePath(track.src));
       audio.loop = track.loop;
       audio.preload = "auto";
       audio.volume = 0;

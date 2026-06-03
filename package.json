@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:github": "GITHUB_PAGES=true NEXT_PUBLIC_BASE_PATH=/website-rpg NEXT_PUBLIC_SITE_URL=https://vincentzjw.github.io/website-rpg next build",
     "start": "next start",
     "lint": "eslint .",
     "generate:bgm": "node scripts/generate-bgm.mjs",

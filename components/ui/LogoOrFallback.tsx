@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { withBasePath } from "@/lib/asset-path";
 
 type LogoOrFallbackProps = {
   logoPath?: string;
@@ -11,7 +12,7 @@ type LogoOrFallbackProps = {
 };
 
 export function LogoOrFallback({ logoPath, logoUrl, fallbackIcon, alt, className = "" }: LogoOrFallbackProps) {
-  const source = logoPath || logoUrl;
+  const source = logoPath ? withBasePath(logoPath) : logoUrl;
   const [failedSource, setFailedSource] = useState<string | null>(null);
   const showLogo = Boolean(source) && source !== failedSource;
 

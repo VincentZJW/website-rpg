@@ -53,6 +53,52 @@ npx tsc --noEmit
 npm run build
 ```
 
+## Deploy to GitHub Pages
+
+This project is configured for static export on GitHub Pages as a project page:
+
+- Repository: [https://github.com/VincentZJW/website-rpg](https://github.com/VincentZJW/website-rpg)
+- Expected deployment URL: [https://vincentzjw.github.io/website-rpg/](https://vincentzjw.github.io/website-rpg/)
+
+GitHub setup:
+
+1. Push this project to `https://github.com/VincentZJW/website-rpg`.
+2. In GitHub, open `Settings -> Pages`.
+3. Set `Source` to `GitHub Actions`.
+4. Push to the `main` branch, or manually run the `Deploy to GitHub Pages` workflow.
+5. The workflow runs `npm ci`, `npm run lint`, and `npm run build`, then uploads `out/` through GitHub's official Pages actions.
+
+GitHub Pages build settings are controlled by:
+
+- [`next.config.mjs`](./next.config.mjs): enables static export, unoptimized images, trailing slashes, and `/website-rpg` `basePath` only when `GITHUB_PAGES=true`.
+- [`lib/asset-path.ts`](./lib/asset-path.ts): prefixes runtime public assets with `NEXT_PUBLIC_BASE_PATH`.
+- [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml): sets `GITHUB_PAGES=true`, `NEXT_PUBLIC_BASE_PATH=/website-rpg`, and `NEXT_PUBLIC_SITE_URL=https://vincentzjw.github.io/website-rpg`.
+
+Local development still uses root paths:
+
+```bash
+npm run dev
+```
+
+To validate the GitHub Pages export locally:
+
+```bash
+npm run build:github
+```
+
+If deployed assets return `404`, check:
+
+- `next.config.mjs` uses `basePath: "/website-rpg"` when `GITHUB_PAGES=true`.
+- GitHub Actions sets `NEXT_PUBLIC_BASE_PATH=/website-rpg`.
+- Runtime public assets such as BGM, company logos, models, favicon, app icons, and `og-image.png` are routed through `withBasePath` or metadata config.
+- The workflow successfully generated and uploaded `out/`.
+
+If this project later moves to a user-site repository such as `VincentZJW.github.io`, remove the project-page base path:
+
+- Set `GITHUB_PAGES=false` or remove `basePath` / `assetPrefix`.
+- Set `NEXT_PUBLIC_BASE_PATH` to an empty value.
+- Set the site URL to `https://vincentzjw.github.io/`.
+
 ## Update Personal Information
 
 Edit [`lib/profile-config.ts`](./lib/profile-config.ts) to update the display name, role, focus statement, and contact links:
